@@ -12,29 +12,42 @@
             color: #fff;
         }
 
-        header, footer {
+        header {
             background-color: #111;
-            padding: 20px;
             text-align: center;
+            padding: 10px 20px;
+            border-bottom: 2px solid #fff;
+        }
+
+        header img {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         nav a {
             color: #fff;
-            margin: 0 10px;
+            margin: 5px 10px;
             text-decoration: none;
-            border: 1px solid white;
-            padding: 5px 10px;
+            border: 1px solid #fff;
+            padding: 8px 16px;
             border-radius: 5px;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            background: white;
-            color: black;
+            background: #fff;
+            color: #000;
         }
 
         .container {
             max-width: 1200px;
-            margin: 40px auto;
+            margin: 30px auto;
             padding: 20px;
         }
 
@@ -43,7 +56,7 @@
         }
 
         .bot-card, .faq-item, .feedback-item, .cart-item {
-            background: #111;
+            background-color: #111;
             padding: 15px;
             border: 1px solid #fff;
             border-radius: 10px;
@@ -63,12 +76,35 @@
             background: gray;
             color: white;
         }
+
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 15px;
+            border-top: 2px solid #fff;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                display: block;
+                width: 80%;
+                text-align: center;
+                margin: 8px 0;
+                font-size: 1.1em;
+            }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>NHYX Community - Loja de Bots</h1>
+    <!-- LOGO -->
+    <img src="https://via.placeholder.com/150x50?text=NHYX+Logo" alt="Logo NHYX Community">
     <nav>
         <a href="#intro">Início</a>
         <a href="#bots">Bots</a>
@@ -81,7 +117,7 @@
 
 <div class="container section" id="intro">
     <h2>Bem-vindo à NHYX Community!</h2>
-    <p>Desenvolvemos bots profissionais para Discord. Explore nossos serviços!</p>
+    <p>Desenvolvemos bots de alta qualidade para Discord. Veja nossos serviços!</p>
 </div>
 
 <div class="container section" id="bots">
@@ -89,20 +125,20 @@
 
     <div class="bot-card">
         <h3>Bot de Moderação</h3>
-        <p>Sistema de staff, logs e punições.</p>
+        <p>Comandos de staff, logs, tickets.</p>
         <button onclick="addToCart('Bot de Moderação - R$30,00')">Adicionar ao Carrinho</button>
     </div>
 
     <div class="bot-card">
         <h3>Bot de Economia</h3>
-        <p>Moedas virtuais, lojas e rankings.</p>
+        <p>Sistema de moedas, lojas, ranks.</p>
         <button onclick="addToCart('Bot de Economia - R$40,00')">Adicionar ao Carrinho</button>
     </div>
 
     <div class="bot-card">
-        <h3>Bot Full Personalizado</h3>
-        <p>Você escolhe todas as funções.</p>
-        <button onclick="addToCart('Bot Full Personalizado - Sob Consulta')">Adicionar ao Carrinho</button>
+        <h3>Bot Personalizado</h3>
+        <p>Monte o bot do jeito que quiser!</p>
+        <button onclick="addToCart('Bot Personalizado - Sob Consulta')">Adicionar ao Carrinho</button>
     </div>
 </div>
 
@@ -116,18 +152,18 @@
     <h2>FAQ - Perguntas Frequentes</h2>
 
     <div class="faq-item">
-        <h3>Como faço o pagamento?</h3>
-        <p>Após escolher o bot, entre no nosso Discord para combinar o pagamento.</p>
+        <h3>Como funciona a entrega?</h3>
+        <p>Após o pagamento, entregamos o bot em até 3 dias úteis.</p>
     </div>
 
     <div class="faq-item">
-        <h3>Qual o prazo de entrega?</h3>
-        <p>Normalmente entregamos em até 3 dias úteis, dependendo do bot.</p>
+        <h3>Quais formas de pagamento?</h3>
+        <p>Pix, PayPal ou transferência bancária.</p>
     </div>
 
     <div class="faq-item">
-        <h3>Posso pedir um bot exclusivo?</h3>
-        <p>Sim! Fale com nossa equipe no Discord.</p>
+        <h3>Posso pedir funções personalizadas?</h3>
+        <p>Sim! Trabalhamos com desenvolvimento sob medida.</p>
     </div>
 </div>
 
@@ -135,20 +171,22 @@
     <h2>Feedback de Clientes</h2>
 
     <div class="feedback-item">
-        <p>"O bot de moderação da NHYX é incrível! Superou minhas expectativas!"</p>
-        <strong>— Cliente: LucasMods</strong>
+        <p>"Bot incrível, suporte excelente!"</p>
+        <strong>— Cliente: LucasDev</strong>
     </div>
 
     <div class="feedback-item">
-        <p>"Fizeram meu bot personalizado do jeito que eu queria! Recomendo muito."</p>
-        <strong>— Cliente: AnaDev</strong>
+        <p>"Atendimento rápido e bot bem feito."</p>
+        <strong>— Cliente: MariaBot</strong>
     </div>
 </div>
 
 <div class="container section" id="discord">
     <h2>Nosso Discord</h2>
     <p>Quantidade de membros: <span id="memberCount">Carregando...</span></p>
-    <a class="discord-link" href="https://discord.gg/86RXTMY4zD" target="_blank">Entrar no Discord</a>
+    <a href="https://discord.gg/86RXTMY4zD" target="_blank">
+        <button>Entrar no Discord</button>
+    </a>
 </div>
 
 <footer>
@@ -156,7 +194,7 @@
 </footer>
 
 <script>
-    // Carrinho Local (Sem backend)
+    // Sistema de Carrinho local
     let cart = [];
 
     function addToCart(item) {
@@ -186,18 +224,8 @@
         displayCart();
     }
 
-    // Contador de membros via Discord Widget API (Simples)
-    async function loadMemberCount() {
-        try {
-            const response = await fetch("https://discord.com/api/guilds/1357016055914168452/widget.json");
-            const data = await response.json();
-            document.getElementById('memberCount').innerText = data.members.length + " membros online";
-        } catch (error) {
-            document.getElementById('memberCount').innerText = "Erro ao carregar";
-        }
-    }
-
-    loadMemberCount();
+    // Contador de membros - Exemplo sem Widget (coloque seu método real depois)
+    document.getElementById('memberCount').innerText = "350 membros"; // Valor manual por enquanto
 </script>
 
 </body>
