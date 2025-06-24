@@ -7,32 +7,29 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0e0e0e, #1c1c1c);
-            color: #ffffff;
+            background: #0f0f0f;
+            color: white;
         }
 
         header {
             background: linear-gradient(90deg, #8a2be2, #6a0dad);
             padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5em;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 10px;
             padding: 8px 16px;
             border-radius: 6px;
-            transition: 0.3s;
             border: 1px solid white;
+            transition: 0.3s;
         }
 
         nav a:hover {
@@ -53,33 +50,22 @@
             margin-bottom: 20px;
         }
 
-        .intro {
-            background-color: #222;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(138,43,226,0.3);
-        }
-
-        .intro p {
-            line-height: 1.6em;
-        }
-
-        .bot-card {
+        .intro, .bot-card, .colab-card {
             background-color: #1e1e1e;
             border-radius: 10px;
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 0 15px rgba(138,43,226,0.4);
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 0 15px rgba(138,43,226,0.3);
         }
 
-        .bot-card:hover {
+        .bot-card:hover, .colab-card:hover {
+            box-shadow: 0 0 25px rgba(138,43,226,0.5);
             transform: translateY(-5px);
-            box-shadow: 0 0 25px rgba(138,43,226,0.6);
         }
 
-        .bot-card h3 {
-            margin-top: 0;
+        .bot-card img, .colab-card img, .discord-logo img {
+            max-width: 100px;
+            border-radius: 10px;
         }
 
         .discord-link {
@@ -114,51 +100,78 @@
 <body>
 
 <header>
-    <h1>NHYX Community</h1>
+    <h1>NHYX Community - Loja de Bots</h1>
     <nav>
         <a href="#intro">Início</a>
-        <a href="#bots">Nossos Bots</a>
-        <a href="https://discord.gg/86RXTMY4zD" target="_blank">Discord</a>
+        <a href="#bots">Bots</a>
+        <a href="#colaboradores">Colaboradores</a>
+        <a href="#discord">Discord</a>
     </nav>
 </header>
 
 <div class="container" id="intro">
-    <h2 class="section-title">Bem-vindo à NHYX Community!</h2>
+    <h2 class="section-title">Apresentação</h2>
     <div class="intro">
-        <p>Somos uma equipe especializada na criação de bots para Discord, oferecendo soluções personalizadas para sua comunidade! Seja para moderação, economia, entretenimento ou sistemas completos, aqui você encontra o bot perfeito para o seu servidor.</p>
-        <p>Entre no nosso Discord e faça seu pedido ou tire suas dúvidas!</p>
-        <a class="discord-link" href="https://discord.gg/86RXTMY4zD" target="_blank">Entrar no Discord</a>
+        <p>Bem-vindo à NHYX Community! Somos uma equipe de desenvolvedores dedicados a criar bots profissionais para Discord. Trabalhamos com soluções de moderação, economia, tickets e muito mais!</p>
+        <p>Confira nossos bots e entre no nosso Discord para mais informações.</p>
     </div>
 </div>
 
 <div class="container" id="bots">
-    <h2 class="section-title">Nossos Bots à Venda</h2>
+    <h2 class="section-title">Nossos Bots</h2>
 
     <div class="bot-card">
         <h3>🤖 Bot de Moderação</h3>
-        <p>Com comandos de administração, logs, sistema de tickets e muito mais.</p>
+        <p>Sistema de punições, logs, tickets e comandos de staff.</p>
         <p><strong>Preço:</strong> R$ 30,00</p>
         <a class="discord-link" href="https://discord.gg/86RXTMY4zD" target="_blank">Comprar</a>
     </div>
 
     <div class="bot-card">
         <h3>💰 Bot de Economia</h3>
-        <p>Com sistema de moedas, loja, banco e comandos de perfil customizados.</p>
+        <p>Sistema de moedas, loja, rank, banco e perfis personalizados.</p>
         <p><strong>Preço:</strong> R$ 40,00</p>
         <a class="discord-link" href="https://discord.gg/86RXTMY4zD" target="_blank">Comprar</a>
     </div>
 
     <div class="bot-card">
-        <h3>🎨 Bot Full Personalizado</h3>
-        <p>Crie o bot dos seus sonhos! Incluindo comandos únicos, sistema de tickets avançado, sistema de ranks, embeds personalizados e muito mais!</p>
-        <p><strong>Preço:</strong> Sob Consulta</p>
-        <a class="discord-link" href="https://discord.gg/86RXTMY4zD" target="_blank">Falar com a Equipe</a>
+        <h3>🎨 Bot Personalizado</h3>
+        <p>Um bot feito do zero com as funções que você quiser!</p>
+        <p><strong>Preço:</strong> Sob consulta</p>
+        <a class="discord-link" href="https://discord.gg/86RXTMY4zD" target="_blank">Falar com a equipe</a>
+    </div>
+</div>
+
+<div class="container" id="colaboradores">
+    <h2 class="section-title">Colaboradores</h2>
+
+    <div class="colab-card">
+        <img src="https://via.placeholder.com/100" alt="Logo Colaborador 1">
+        <h3>DevMaster</h3>
+        <p>Especialista em sistemas de economia e integração de APIs.</p>
+        <a class="discord-link" href="https://discordapp.com/users/123456789" target="_blank">Discord do DevMaster</a>
     </div>
 
+    <div class="colab-card">
+        <img src="https://via.placeholder.com/100" alt="Logo Colaborador 2">
+        <h3>PixelBot</h3>
+        <p>Focado em design de comandos e experiência de usuário.</p>
+        <a class="discord-link" href="https://discordapp.com/users/987654321" target="_blank">Discord do PixelBot</a>
+    </div>
+</div>
+
+<div class="container" id="discord">
+    <h2 class="section-title">Nosso Discord</h2>
+
+    <div class="discord-logo">
+        <img src="https://via.placeholder.com/150" alt="Logo NHYX Community">
+    </div>
+    <p>Entre agora no nosso servidor oficial do Discord e faça parte da nossa comunidade!</p>
+    <a class="discord-link" href="https://discord.gg/86RXTMY4zD" target="_blank">Entrar no Discord</a>
 </div>
 
 <footer>
-    <p>© 2025 NHYX Community | Todos os direitos reservados | <a href="https://discord.gg/86RXTMY4zD" target="_blank" style="color:white; text-decoration:underline;">Nosso Discord</a></p>
+    <p>© 2025 NHYX Community | Todos os direitos reservados.</p>
 </footer>
 
 </body>
