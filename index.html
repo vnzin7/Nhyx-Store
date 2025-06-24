@@ -103,7 +103,7 @@
 <body>
 
 <header>
-    <!-- LOGO -->
+    <!-- LOGO - Troque o link abaixo pela sua logo -->
     <img src="https://via.placeholder.com/150x50?text=NHYX+Logo" alt="Logo NHYX Community">
     <nav>
         <a href="#intro">Início</a>
@@ -183,7 +183,7 @@
 
 <div class="container section" id="discord">
     <h2>Nosso Discord</h2>
-    <p>Quantidade de membros: <span id="memberCount">Carregando...</span></p>
+    <p>Quantidade de membros online: <span id="memberCount">Carregando...</span></p>
     <a href="https://discord.gg/86RXTMY4zD" target="_blank">
         <button>Entrar no Discord</button>
     </a>
@@ -224,8 +224,19 @@
         displayCart();
     }
 
-    // Contador de membros - Exemplo sem Widget (coloque seu método real depois)
-    document.getElementById('memberCount').innerText = "350 membros"; // Valor manual por enquanto
+    // Contador de membros via Widget API
+    async function loadMemberCount() {
+        try {
+            const response = await fetch("https://discord.com/api/guilds/1357016055914168452/widget.json");
+            const data = await response.json();
+            const totalMembros = data.members.length;
+            document.getElementById('memberCount').innerText = totalMembros + " membros online";
+        } catch (error) {
+            document.getElementById('memberCount').innerText = "Erro ao carregar";
+        }
+    }
+
+    loadMemberCount();
 </script>
 
 </body>
