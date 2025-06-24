@@ -189,7 +189,7 @@
     // Contador de membros via Discord Widget API (Simples)
     async function loadMemberCount() {
         try {
-            const response = await fetch("https://discord.com/api/guilds/1210391687194423316/widget.json");
+            const response = await fetch("https://discord.com/api/guilds/1357016055914168452/widget.json");
             const data = await response.json();
             document.getElementById('memberCount').innerText = data.members.length + " membros online";
         } catch (error) {
