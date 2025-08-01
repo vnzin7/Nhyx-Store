@@ -1,249 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NHYX Community - Loja de Bots</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-        }
-
-        header {
-            background-color: #111;
-            text-align: center;
-            padding: 10px 20px;
-            border-bottom: 2px solid #fff;
-        }
-
-        header img {
-            max-width: 150px;
-            margin-bottom: 10px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: #fff;
-            margin: 5px 10px;
-            text-decoration: none;
-            border: 1px solid #fff;
-            padding: 8px 16px;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            background: #fff;
-            color: #000;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 20px;
-        }
-
-        .section {
-            margin-bottom: 50px;
-        }
-
-        .bot-card, .faq-item, .feedback-item, .cart-item {
-            background-color: #111;
-            padding: 15px;
-            border: 1px solid #fff;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        button {
-            background: white;
-            color: black;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: gray;
-            color: white;
-        }
-
-        footer {
-            background-color: #111;
-            text-align: center;
-            padding: 15px;
-            border-top: 2px solid #fff;
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav a {
-                display: block;
-                width: 80%;
-                text-align: center;
-                margin: 8px 0;
-                font-size: 1.1em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nhyx Dev</title>
+  <link rel="icon" href="https://media.discordapp.net/attachments/1392165952442990712/1400644907219288255/ChatGPT_Image_31_de_jul._de_2025_21_14_58.png?ex=688d63b8&is=688c1238&hm=f494fe4996350a48014cb3ee13415d872e9467cd733ade1c7d48897e389d3acf&=&format=webp&quality=lossless&width=698&height=698" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<header>
-    <!-- LOGO - Troque o link abaixo pela sua logo -->
-    <img src="https://images-ext-1.discordapp.net/external/lpqGmQLedKk9JL9VqkY2mvFg2Rvd4fkHt171r2yZIoo/%3Fsize%3D1024/https/cdn.discordapp.com/icons/1357016055914168452/b112dbb7b343db4dcc2bb2473845f3c2.png?format=webp&quality=lossless&width=798&height=798" alt="Logo NHYX Community">
-    <nav>
-        <a href="#intro">Início</a>
-        <a href="#bots">Bots</a>
-        <a href="#cart">Carrinho</a>
-        <a href="#faq">FAQ</a>
-        <a href="#feedback">Feedback</a>
-        <a href="#discord">Discord</a>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="https://media.discordapp.net/attachments/1392165952442990712/1400644907219288255/ChatGPT_Image_31_de_jul._de_2025_21_14_58.png?ex=688d63b8&is=688c1238&hm=f494fe4996350a48014cb3ee13415d872e9467cd733ade1c7d48897e389d3acf&=&format=webp&quality=lossless&width=698&height=698" alt="Nhyx Dev Logo" />
+        <span>Nhyx Dev</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="vendas.html">Vendas</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<div class="container section" id="intro">
-    <h2>Bem-vindo à NHYX Community!</h2>
-    <p>Desenvolvemos bots de alta qualidade para Discord. Veja nossos serviços!</p>
-</div>
+  <main>
+    <section class="hero">
+      <h1>Bem-vindo ao Nhyx Dev</h1>
+      <p>Desenvolvendo bots incríveis para Discord em Python e JavaScript.</p>
+      <a href="catalogo.html" class="btn-primary">Ver Catálogo</a>
+      <a href="contato.html" class="btn-secondary">Fale Conosco</a>
+    </section>
 
-<div class="container section" id="bots">
-    <h2>Nossos Bots</h2>
+    <section class="destaques">
+      <h2>Destaques</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Bots Personalizados</h3>
+          <p>Criamos bots sob medida para seu servidor com as funcionalidades que você desejar.</p>
+        </article>
+        <article class="card">
+          <h3>Suporte e Atualizações</h3>
+          <p>Suporte dedicado e atualizações constantes para garantir a melhor experiência.</p>
+        </article>
+        <article class="card">
+          <h3>Entrega Rápida</h3>
+          <p>Entrega ágil para você começar a usar seu bot o quanto antes.</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-    <div class="bot-card">
-        <h3>Bot de Moderação</h3>
-        <p>Comandos de staff, logs, tickets.</p>
-        <button onclick="addToCart('Bot de Moderação - R$10,00')">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="bot-card">
-        <h3>Bot de Economia</h3>
-        <p>Sistema de moedas, lojas, ranks.</p>
-        <button onclick="addToCart('Bot de Economia - R$15,00')">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="bot-card">
-        <h3>Bot Personalizado</h3>
-        <p>Monte o bot do jeito que quiser!</p>
-        <button onclick="addToCart('Bot Personalizado - Sob Consulta')">Adicionar ao Carrinho</button>
-    </div>
-</div>
-
-<div class="container section" id="cart">
-    <h2>Carrinho</h2>
-    <div id="cart-items"></div>
-    <button onclick="clearCart()">Limpar Carrinho</button>
-</div>
-
-<div class="container section" id="faq">
-    <h2>FAQ - Perguntas Frequentes</h2>
-
-    <div class="faq-item">
-        <h3>Como funciona a entrega?</h3>
-        <p>Após o pagamento, entregamos o bot em até 3 dias úteis.</p>
-    </div>
-
-    <div class="faq-item">
-        <h3>Quais formas de pagamento?</h3>
-        <p>Pix, PayPal ou transferência bancária.</p>
-    </div>
-
-    <div class="faq-item">
-        <h3>Posso pedir funções personalizadas?</h3>
-        <p>Sim! Trabalhamos com desenvolvimento sob medida.</p>
-    </div>
-</div>
-
-<div class="container section" id="feedback">
-    <h2>Feedback de Clientes</h2>
-
-    <div class="feedback-item">
-        <p>"Bot incrível, suporte excelente!"</p>
-        <strong>— Cliente: LucasDev</strong>
-    </div>
-
-    <div class="feedback-item">
-        <p>"Atendimento rápido e bot bem feito."</p>
-        <strong>— Cliente: MariaBot</strong>
-    </div>
-</div>
-
-<div class="container section" id="discord">
-    <h2>Nosso Discord</h2>
-    <p>Quantidade de membros online: <span id="memberCount">Carregando...</span></p>
-    <a href="https://discord.gg/86RXTMY4zD" target="_blank">
-        <button>Entrar no Discord</button>
-    </a>
-</div>
-
-<div class="container section" id="banner">
-    <h2>Obrigado por visitar!</h2>
-    <img src="https://media.discordapp.net/attachments/1372752775905017897/1375157395780800583/standard.gif?ex=685c2c20&is=685adaa0&hm=95cf4064d8235dd24e9d38c1673bf3352b5f85b8fd7c85cfad4e921a896d73a8&=" alt="Banner NHYX Community" style="width: 100%; border-radius: 10px; margin-top: 20px;">
-</div>
-
-<footer>
-    <p>© 2025 NHYX Community | Todos os direitos reservados.</p>
-</footer>
-
-
-<script>
-    // Sistema de Carrinho local
-    let cart = [];
-
-    function addToCart(item) {
-        cart.push(item);
-        displayCart();
-    }
-
-    function displayCart() {
-        const cartDiv = document.getElementById('cart-items');
-        cartDiv.innerHTML = "";
-        if (cart.length === 0) {
-            cartDiv.innerHTML = "<p>Carrinho vazio.</p>";
-        } else {
-            cart.forEach((item, index) => {
-                cartDiv.innerHTML += `<div class="cart-item">${item} <button onclick="removeFromCart(${index})">Remover</button></div>`;
-            });
-        }
-    }
-
-    function removeFromCart(index) {
-        cart.splice(index, 1);
-        displayCart();
-    }
-
-    function clearCart() {
-        cart = [];
-        displayCart();
-    }
-
-    // Contador de membros via Widget API
-    async function loadMemberCount() {
-        try {
-            const response = await fetch("https://discord.com/api/guilds/1357016055914168452/widget.json");
-            const data = await response.json();
-            const totalMembros = data.members.length;
-            document.getElementById('memberCount').innerText = totalMembros + " membros online";
-        } catch (error) {
-            document.getElementById('memberCount').innerText = "Erro ao carregar";
-        }
-    }
-
-    loadMemberCount();
-</script>
-
+  <footer>
+    <p>© 2025 Nhyx Dev. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
